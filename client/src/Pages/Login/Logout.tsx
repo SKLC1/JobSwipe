@@ -7,6 +7,7 @@ function Logout() {
 
   function handleLogout(){  
     dispatch(logout())
+    localStorage.setItem("token","null")
   }
 
   return ( 

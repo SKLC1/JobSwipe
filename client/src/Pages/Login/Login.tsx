@@ -16,7 +16,9 @@ function Login() {
       password: password,
     })
     console.log(data);
-    
+    if(data.accessToken){
+      localStorage.setItem("token",data.accessToken)
+    }
 
     dispatch(login({
       email: email,
@@ -24,7 +26,7 @@ function Login() {
     }))
   }
 
-  return ( 
+  return (
     <>
       <div>
         <form onSubmit={(e)=>handleSubmit(e)}>
