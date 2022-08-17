@@ -25,9 +25,10 @@ function Login() {
       password: password,
     }))
   }
-
+  
   return (
     <>
+    <div className="page">
      <div className="card">
       <h4 className="title">Log In!</h4>
       <form  onSubmit={(e)=>handleSubmit(e)}>
@@ -43,8 +44,9 @@ function Login() {
       </div>
        <button className="btn" type="submit">Login</button>
         {/* <a href="#" className="btn-link">Forgot your password?</a> */}
-    </form>
-</div>
+       </form>
+      </div>
+    </div>
     </>
    );
 }
